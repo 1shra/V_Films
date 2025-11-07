@@ -1,0 +1,6 @@
+@import "tailwindcss";
+*{
+  background-image: url(./assets/BG.png);
+  max-width: 100vw;
+  max-height: 100vh;
+}
