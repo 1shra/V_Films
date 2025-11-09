@@ -120,7 +120,7 @@ const Form = () => {
         <div className="flex flex-col sm:flex-row sm:justify-center sm:items-center gap-2 sm:gap-4 font-bold text-orange-600 text-sm pt-10" style={{fontFamily: "Halant"}}>
           <a 
             href="mailto:vernita@varnanfilms.co.in" 
-            className="underline hover:text-orange-800 break-all"
+            className="hover:text-orange-800 break-all no-underline"
           >
             vernita@varnanfilms.co.in
           </a>

@@ -19,14 +19,14 @@ const OurStory = () => {
         </div>
 
         {/* desc */}
-        <div className="max-w-[530px] mt-8 text-center lg:text-left">
+        <div className="max-w-[530px] mt-10 text-center lg:text-left">
           <p className="text-[18px] md:text-[22px] leading-[120%] text-gray-800" style={{ fontFamily: 'Instrument Sans' }}>
             Some stories come from the biggest names. Others begin with bold, rising voices.
             We’ve been fortunate to walk alongside both — listening, creating, and building stories that matter.
           </p>
         </div>
 
-        {/* Image Stack */}
+        {/*images*/}
         <div className="flex justify-center items-center mt-10 relative">
           <img
             src={pict1}
@@ -36,7 +36,7 @@ const OurStory = () => {
           <img
             src={pict2}
             alt="Image 2"
-            className="w-[180px] md:w-[220px] lg:w-[250px] h-[180px] md:h-[220px] lg:h-[250px] object-cover rounded-xl rotate-0 -ml-[60px] md:-ml-[80px] z-20"
+            className="w-[180px] md:w-[220px] lg:w-[250px] h-[180px] md:h-[220px] lg:h-[250px] object-cover rounded-xl rotate-0 -ml-[60px] md:-ml-20 z-20"
           />
           <img
             src={pict3}
@@ -47,7 +47,7 @@ const OurStory = () => {
       </div>
 
       {/*right sectioin*/}
-      <div className="flex flex-col justify-start mt-12 lg:mt-0 lg:self-start">
+      <div className="flex flex-col justify-start pt-10 mt-12 lg:mt-0 lg:self-start">
         <p className="max-w-[595px] font-[Island_Moments] text-[36px] md:text-[45px] lg:text-[53px] leading-[100%] text-center lg:text-left text-gray-800">
           Every project is more than just a brief – it’s a new chapter waiting to be written.
           Together, we've crafted tales that inspire, connect, and endure.
