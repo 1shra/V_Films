@@ -5,7 +5,7 @@ import closeIcon from  '../assets/Close-Vector.png'
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   return (
-    <div className='fixed top-0 left-0 w-full bg-white z-1 px-10'>
+    <div className='fixed top-0 left-0 w-full z-1 px-10'>
       {/* Hamburger PNG */}
       <button onClick={()=>setIsOpen(!isOpen)} 
         className="fixed right-5 top-4 z-50 flex flex-col justify-center items-center w-10 h-10 space-y-2 p-2 rounded-full">

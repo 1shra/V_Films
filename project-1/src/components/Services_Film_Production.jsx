@@ -6,17 +6,19 @@ import arrow from "../assets/Arrow.svg"
 import {Link} from "react-router-dom"
 const FilmsPage = ({title,quote,author,imagePath,desc,listItems,next,pict1,pict2,pict3,pict4}) => {
   return (
-    <div className="relative min-h-screen bg-[rgba(251,226,222,0.5)] font-serif px-2 sm:px-8 py-20 text-black">
+    <div className="relative min-h-screen font-serif px-2 sm:px-8 py-20 text-black">
       {/* Quote Section */}
       <div className="flex flex-col items-center text-center mb-12">
-        <h1 className="text-xl sm:text-2xl md:text-3xl font-normal mb-1">
-          {quote} – {author}
-        </h1>
-        <img
-          src={underLineSvg}
-          alt="underline"
-          className="w-1/3 max-h-10 sm:w-1/2 md:w-2/3 "
-        />
+        <div className="inline-block text-center">
+          <h1 className="text-xl sm:text-2xl md:text-3xl font-normal" style={{fontFamily: "Halant"}}>
+            {quote} – {author}
+          </h1>
+          <img
+            src={underLineSvg}
+            alt="underline"
+            className="w-full h-auto  mx-auto "
+          />
+        </div>
       </div>
 
       <div className="flex flex-col justify-center items-center m-auto w-full max-w-6xl">

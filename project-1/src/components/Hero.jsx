@@ -3,7 +3,7 @@ import mandal from '../assets/HeroMandala.png'
 import Films from '../assets/Films.png'
 const Hero = () => {
   return (
-    <div className="min-h-screen bg-[#fbe9e4] relative px-8 pt-8 flex items-center justify-center ml-0">
+    <div className="min-h-screen relative px-8 pt-8 flex items-center justify-center ml-0">
       <div className="flex max-w-7xl w-full">
         {/* Left side */}
         <div className="relative flex-1 flex justify-center items-center ml-0">

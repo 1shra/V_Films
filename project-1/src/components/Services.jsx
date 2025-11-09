@@ -22,11 +22,13 @@ const Services = () => {
         style={{ fontFamily: 'Halant' }}
       >
         {/* Heading */}
-        <div className="flex flex-col items-center text-center">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-normal mb-3">
-            The storyboard reveals the breadth of our craft.
-          </h1>
-          <img src={underLineSvg} alt="underline" className="w-2/3 sm:w-1/2 md:w-1/3" />
+        <div className="inline-block text-center">
+          <div className="flex flex-col items-center text-center">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-normal">
+              The storyboard reveals the breadth of our craft.
+            </h1>
+            <img src={underLineSvg} alt="underline" className="w-full h-auto mx-auto mb-10" />
+          </div>
         </div>
 
         {/* Service images (clickable links) */}
