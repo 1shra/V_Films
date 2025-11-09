@@ -31,8 +31,8 @@ const Varman = () => {
 
         {/* Heading */}
         <div className='text-center mb-15'>
-          <h1 className='text-3xl font-bold mb-2'>The Highlight Reel</h1>
-          <p className='text-gray-700 text-sm'>Watch the magic we&apos;ve captured.</p>
+          <h1 className='font-normal text-[40px] leading-[100%] tracking-[0] text-center' style={{fontFamily:"Halant"}}>The Highlight Reel</h1>
+          <p className='text-gray-700 text-xl mt-4' style={{fontFamily:"Instrument Sans"}}>Watch the magic we&apos;ve captured.</p>
         </div>
 
         {/* Video Container */}
