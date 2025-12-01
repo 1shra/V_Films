@@ -1,14 +1,14 @@
 import { Routes, Route } from 'react-router-dom'
+import { Suspense, lazy } from 'react'
 //pages
-import LetsTalk from "./components/LetsTalk"
-import Navbar from "./components/Navbar"
-import OurStory from "./components/OurStory"
-import Services from "./components/Services"
-
-import Varman from "./components/Varman"
-import Hero from "./components/Hero"
-import TheirStories from "./components/TheirStories"
-import FilmsPage from "./components/Services_Film_Production"
+const LetsTalk = lazy(() => import("./components/LetsTalk"));
+const Navbar = lazy(() => import("./components/Navbar"));
+const OurStory = lazy(() => import("./components/OurStory"));
+const Services = lazy(() => import("./components/Services"));
+const Varman = lazy(() => import("./components/Varman"));
+const Hero = lazy(() => import("./components/Hero"));
+const TheirStories = lazy(() => import("./components/TheirStories"));
+const FilmsPage = lazy(() => import("./components/Services_Film_Production"));
 //Assets
 import FilmProduction from './assets/FilmProduction1.png'
 import Branding1 from './assets/Branding1.png'
@@ -81,44 +81,47 @@ const servicePages = [{
   picts:[artimg1,artimg2,artimg3,artimg4]
 }]
 
-
-
-
 function Home() {
   return (
-    <div className="min-h-screen  text-black">
-      <Navbar />
-      <Routes>
+    <div className="min-h-screen text-black">
+      <Suspense fallback={<div className="p-10 text-center">Loading...</div>}>
+
+        <Navbar />
+
+        <Routes>
           <Route path="/" element={<Hero />} />
           <Route path="/services" element={<Services />} />
 
-          {servicePages.map(({path,title,quote,author,imagePath,desc,listItems,picts})=>(
+          {servicePages.map(({path,title,quote,author,imagePath,desc,listItems,picts}) => (
             <Route 
-              key={path} 
+              key={path}
               path={path}
-              element={<FilmsPage 
-                title={title}
-                quote={quote}
-                author={author}
-                imagePath={imagePath}
-                desc={desc}
-                listItems={listItems}
-                pict1={picts[0]}
-                pict2={picts[1]}
-                pict3={picts[2]}
-                pict4={picts[3]}
-                next="/services"
-              />}
+              element={
+                <FilmsPage
+                  title={title}
+                  quote={quote}
+                  author={author}
+                  imagePath={imagePath}
+                  desc={desc}
+                  listItems={listItems}
+                  pict1={picts[0]}
+                  pict2={picts[1]}
+                  pict3={picts[2]}
+                  pict4={picts[3]}
+                  next="/services"
+                />
+              }
             />
           ))}
 
-
-          <Route path="/their-stories" element={<TheirStories />} />         
+          <Route path="/their-stories" element={<TheirStories />} />
           <Route path="/varman" element={<Varman />} />
           <Route path="/ourstory" element={<OurStory />} />
           <Route path="/lets-talk" element={<LetsTalk />} />
+
         </Routes>
-      </div>
+      </Suspense>
+    </div>
   )
 }
 
